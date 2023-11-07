@@ -1,0 +1,62 @@
+
+
+
+.pieChartBox {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  button{
+    cursor: pointer;
+  }
+
+  .chart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+  .options {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 14px;
+
+    .option {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+
+      .title {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        .dot {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+button .btn1{
+  padding: 4px;
+  border-radius: 5%;
+  width: 50%;
+  margin-left: 20%;
+  margin-top: 5%;
+  font-size: large;
+  color: red;
+}
+
+button .btn1:hover{
+  background-color: aquamarine;
+}

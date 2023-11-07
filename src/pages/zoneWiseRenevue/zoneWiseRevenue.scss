@@ -1,0 +1,48 @@
+
+.zonewise{
+
+    h1{
+    display: flex;
+    justify-content: center;
+    color: aqua;
+    font-size: 1.5rem;
+}
+
+
+.box{
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2rem;
+    
+
+    .box1{
+        border:2px solid grey;
+        padding: 2rem;
+    
+
+    }
+
+    .box2{
+        border:2px solid grey;
+        padding: 2rem;
+
+        
+
+    }
+
+}
+
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+
+  .options{
+    display: flex;
+    justify-content:space-between;
+
+  }

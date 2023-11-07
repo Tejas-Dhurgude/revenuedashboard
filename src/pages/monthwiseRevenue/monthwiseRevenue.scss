@@ -1,0 +1,33 @@
+@import '../../styles/varaibles.scss';
+
+
+.monthwise-revenue{
+
+    .title{
+        font-size: 1.5rem;
+        color: blanchedalmond;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    .produce-wise-graph{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+        gap: 20px;
+        
+    }
+
+    .box{
+        padding: 20px;
+    border-radius: 10px;
+    border: 2px solid $soft-bg;
+
+    h1{
+        margin-bottom: 1rem;
+    }
+    
+    }
+
+}

@@ -1,0 +1,48 @@
+@import '../../styles/varaibles.scss';
+
+.title-head{
+  display: flex;
+  
+  font-size: 2rem;
+  margin-bottom: .5rem;
+  
+  justify-content: space-between;
+  
+  font-family: Calibri, sans-serif; /* Set Calibri as the font family */
+  font-weight: bold; /* Apply bold style */
+  // font-style: italic; /* Apply italic style */
+
+}
+
+.home {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(180px, auto);
+  grid-auto-flow: dense;
+
+  
+
+  .box {
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid $soft-bg;
+    
+  }
+
+  .box1 {
+    grid-column: span 1;
+    grid-row: span 3;
+  }
+
+  .box4 {
+    grid-column: span 1;
+    grid-row: span 3;
+  }
+  .box7 {
+    grid-column: span 2;
+    grid-row: span 2;
+
+    
+  }
+}

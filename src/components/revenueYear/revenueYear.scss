@@ -1,0 +1,15 @@
+
+
+.title2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: aqua;
+    
+}
+.revenueyear{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
