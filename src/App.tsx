@@ -9,13 +9,13 @@ import './styles/global.scss'
 // import TopBox from "./components/topBox/TopBox";
 // import AddZoneData from "./pages/addZoneData/AddZoneData";
 
-import RevenueYear from './components/revenueYear/RevenueYear'
+// import RevenueYear from './components/revenueYear/RevenueYear'
+import RevenueYear from "./components/revenueYear/RevenueYear";
 
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Link,
+  
   Outlet,
 } from "react-router-dom";
 import MonthwiseRevenue from "./pages/monthwiseRevenue/MonthwiseRevenue";

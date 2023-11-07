@@ -29,10 +29,10 @@ import {
     // //   }
     // // });
   
-    const handleDelete = (id: number) => {
-      //delete the item
-      // mutation.mutate(id)
-    };
+    // const handleDelete = (id: number) => {
+    //   //delete the item
+    //   // mutation.mutate(id)
+    // };
   
     const actionColumn: GridColDef = {
       field: "action",
@@ -44,7 +44,7 @@ import {
             <Link to={`/${props.slug}/${params.row.id}`}>
               <img src="/view.svg" alt="" />
             </Link>
-            <div className="delete" onClick={() => handleDelete(params.row.id)}>
+            <div className="delete" >
               <img src="/delete.svg" alt="" />
             </div>
           </div>

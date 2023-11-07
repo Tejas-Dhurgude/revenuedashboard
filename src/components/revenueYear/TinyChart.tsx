@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import './TinyChart.scss'
 import {
     LineChart,
@@ -9,17 +9,17 @@ import {
     Tooltip,
     Legend,
     ResponsiveContainer,
-    AreaChart,
-     Area,
+    
   } from 'recharts';
   
-  const yAxisFormatter = (value) => {
-    if (value >= 1000000) {
-      return `${value / 1000000}M`;
-    } else {
-      return value;
-    }
-  };
+  // const yAxisFormatter = (value:string) => {
+  //   if (value >= 1000000) {
+  //     return `${value / 1000000}M`;
+  //   } else {
+  //     return value;
+  //   }
+  // };
+
   
 
 export default function TinyChart() {
@@ -92,7 +92,7 @@ export default function TinyChart() {
             setRevenueInfo(jsonData);
         }
         catch(err){
-            console.log(err.messsage)
+            console.log(err)
         }
 
     }
@@ -115,7 +115,7 @@ export default function TinyChart() {
 <YAxis
   label={{ value: 'Revenue', angle: -90, position: 'insideLeft', offset: -10 }}
   tick={{ fontSize: 12 }}
-  tickFormatter={yAxisFormatter} // Apply the custom tick formatter
+  // tickFormatter={yAxisFormatter} // Apply the custom tick formatter
 />
 
 

@@ -1,29 +1,39 @@
-import React from 'react'
+
 import './BarChartuse.scss'
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,} from 'recharts';
+import { BarChart, Bar, XAxis, YAxis,  Tooltip,  ResponsiveContainer,} from 'recharts';
 
 
-export default function BarChartUse(props) {
+type RevenueInfo = {
+  year: string;
+  revenue: number;
+};
 
-  const customTooltipFormatter = (value, name) => {
+type Props = {
+  revenueInfo: RevenueInfo[];
+};
+
+export default function BarChartUse(props:Props) {
+
+  const customTooltipFormatter = (value: number, name: string) => {
     return [`${name}: ${value.toLocaleString()}`, 'Custom Label'];
   };
-    
-    let fy19Sum=1000;
-    let fy20Sum=2000;
-    let fy21Sum=3240;
-    let fy22Sum=4350;
-    let fy23Sum=3530;
+    console.log(props)
+    // let fy19Sum=1000;
+    // let fy20Sum=2000;
+    // let fy21Sum=3240;
+    // let fy22Sum=4350;
+    // let fy23Sum=3530;
 
-    props.revenueInfo.forEach(item=>{
-        fy19Sum += item.fy19;
-        fy20Sum += item.fy20;
-        fy21Sum += item.fy21;
-        fy22Sum += item.fy22;
-        fy23Sum += item.fy23;
+    // props.revenueInfo.forEach(item=>{
+    //     fy19Sum += item.fy19;
+    //     fy20Sum += item.fy20;
+    //     fy21Sum += item.fy21;
+    //     fy22Sum += item.fy22;
+    //     fy23Sum += item.fy23;
         
-    })
-    console.log(fy19Sum)
+    // })
+
+    
     // const dataSum = [
     //   { year: 'FY19', value: fy19Sum },
     //   { year: 'FY20', value: fy20Sum },

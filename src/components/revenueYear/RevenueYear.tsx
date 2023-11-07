@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './revenueYear.scss';
-import React from 'react';
+
 import TinyChart from './TinyChart';
 import BarChartUse from './BarChartUse';
 
@@ -25,7 +25,7 @@ export default function RevenueYear() {
         setRevenueInfo(jsonData);
     }
     catch(err){
-        console.log(err.messsage)
+        console.log(err)
     }
 
 }

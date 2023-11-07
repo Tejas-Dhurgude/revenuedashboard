@@ -1,7 +1,16 @@
 
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-export default function BarChartA(props) {
+type Props = {
+  data: {
+    id: number | string;
+    month: number | string;
+    revenue: number | string;
+    volume: number | string;
+  }[];
+};
+
+export default function BarChartA(props:Props) {
   // Filter out objects without a "volume" property
   const filteredData = props.data.filter(item => item.hasOwnProperty('volume'));
 

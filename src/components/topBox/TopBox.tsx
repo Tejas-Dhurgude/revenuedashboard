@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import "./topBox.scss";
 import { topDealUsers } from "../../data.ts";
 
@@ -6,8 +6,9 @@ const TopBox = () => {
   const [revenue, setRevenue] = useState([
     4000, 5000, 8000, 9000, 10000, 90000, 99990,
   ]);
+  
 
-  const currentYear = new Date().getFullYear();
+  // const currentYear = new Date().getFullYear();
 
   // useEffect(() => {
   //   // Create an async function to fetch data for all users
@@ -32,6 +33,10 @@ const TopBox = () => {
 
   //   fetchDataForAllUsers(); // Call the data fetching function when the component mounts
   // }, [currentYear]);
+
+  useEffect(()=>{
+    setRevenue(revenue)
+  },[])
 
   return (
     <div className="topBox">

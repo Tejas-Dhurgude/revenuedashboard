@@ -225,9 +225,9 @@ export const menu = [
     color: "#8884d8",
     icon: "/userIcon.svg",
     title: "October Revenue",
-    number: "2200",
+    number: 2200,
     dataKey: "users",
-    percentage: '+4',
+    percentage: 4,
     chartData: [
       { name: "Week1", users: 400 },
       { name: "Week2", users: 600 },
@@ -243,9 +243,9 @@ export const menu = [
     color: "skyblue",
     icon: "/productIcon.svg",
     title: "Target Revenues ",
-    number: "57",
+    number: 57,
     dataKey: "products",
-    percentage: '+8',
+    percentage: 8,
     chartData: [
       { name: "Week1", products: 15 },
       { name: "Week2", products: 10 },
@@ -259,7 +259,7 @@ export const menu = [
     color: "teal",
     icon: "/revenueIcon.svg",
     title: "2023 Revenue",
-    number: "56.432",
+    number: 56.432,
     dataKey: "revenue",
     percentage: -12,
     chartData: [
@@ -274,7 +274,7 @@ export const menu = [
     color: "gold",
     icon: "/conversionIcon.svg",
     title: "E-Comm Orders",
-    number: "2.6",
+    number: 2.6,
     dataKey: "ratio",
     percentage: 12,
     chartData: [

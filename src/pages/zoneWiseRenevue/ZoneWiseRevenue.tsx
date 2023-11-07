@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState,useEffect } from "react";
 import './zoneWiseRevenue.scss';
 import {
   BarChart,
@@ -37,31 +37,58 @@ export default function ZoneWiseRevenue() {
     },
   ]);
 
-  const fetchData = async (year) => {
-    const response = await fetch(`http://localhost:4000/zonewisereport/${year}`);
-    const jsonData = await response.json();
+  useEffect(()=>{
+    setData(data)
+  },[])
 
-    const updatedData = data.map((item) => ({
-      ...item,
-      value: jsonData[item.zone], // Update the value based on the fetched data
-    }));
+  // const fetchData = async (year) => {
+  //   const response = await fetch(`http://localhost:4000/zonewisereport/${year}`);
+  //   const jsonData = await response.json();
 
-    setData(updatedData);
-  }
+  //   const updatedData = data.map((item) => ({
+  //     ...item,
+  //     value: jsonData[item.zone], // Update the value based on the fetched data
+  //   }));
 
-  useEffect(() => {
-    // Pass the desired year when calling fetchData
-    fetchData(2023); // Change the year to the desired value
-  }, []);
+  //   setData(updatedData);
+  // }
 
+  // useEffect(() => {
+  //   // Pass the desired year when calling fetchData
+  //   fetchData(2023); // Change the year to the desired value
+  // }, []);
+
+  
   const RADIAN = Math.PI / 180;
-  const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
+  const renderCustomizedLabel = ({
+    cx,
+    cy,
+    midAngle,
+    innerRadius,
+    outerRadius,
+    percent,
+    
+  }: {
+    cx: number;
+    cy: number;
+    midAngle: number;
+    innerRadius: number;
+    outerRadius: number;
+    percent: number;
+    index: number;
+  }) => {
     const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
     const x = cx + radius * Math.cos(-midAngle * RADIAN);
     const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
     return (
-      <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+      <text
+        x={x}
+        y={y}
+        fill="white"
+        textAnchor={x > cx ? "start" : "end"}
+        dominantBaseline="central"
+      >
         {`${(percent * 100).toFixed(0)}%`}
       </text>
     );
@@ -96,7 +123,7 @@ export default function ZoneWiseRevenue() {
         <div className="box2">
           <ResponsiveContainer width="100%" height={300}>
             <PieChart width={400} height={400}>
-              <Tooltip formatter={(value, name) => [value, 'Revenue']} />
+              <Tooltip formatter={(value) => [value, 'Revenue']} />
               <Pie
                 data={data}
                 cx="50%"

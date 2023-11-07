@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line,  Tooltip,  ResponsiveContainer } from 'recharts';
 
 
 
@@ -12,7 +12,7 @@ type Props = {
   icon: string;
   title: string;
   dataKey: string;
-  number: number | string;
+  number: number;
   percentage: number;
   chartData: object[];
 };

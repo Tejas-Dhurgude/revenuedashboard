@@ -1,19 +1,19 @@
 
 import { productA,productB,productC,productD } from '../../data';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+// import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import BarChartA from '../../components/barChartA/BarChartA';
 import './monthwiseRevenue.scss'
 
 export default function MonthwiseRevenue() {
-    const currentDate = new Date();
+    // const currentDate = new Date();
 
 // Get the current year
-const day = currentDate.getDate();
-const month = currentDate.getMonth() + 1; // Adding 1 because months are zero-based
-const year = currentDate.getFullYear();
+// const day = currentDate.getDate();
+// const month = currentDate.getMonth() + 1; // Adding 1 because months are zero-based
+// const year = currentDate.getFullYear();
 
 // Format the date as "DD/MM/YYYY"
-const formattedDate = `${day}/${month}/${year}`;
+// const formattedDate = `${day}/${month}/${year}`;
 console.log(productA)
 
   return (

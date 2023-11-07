@@ -4,7 +4,7 @@ import './Home.scss'
 import {ChartBox} from '../../components/chartBox/ChartBox'
 import { chartBoxConversion, chartBoxProduct, chartBoxRevenue, chartBoxUser} from '../../data'
 import PieChartBox from '../../components/pieCardBox/PieCardBox'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 // export const chartBoxUser = {
 //   color: "#8884d8",
@@ -26,16 +26,16 @@ import { useState } from 'react'
 
 export default function Home() {
 
-  const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  // const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
   const[data1,setData1]=useState(
      {
   color: "#8884d8",
   icon: "/userIcon.svg",
   title: "Collection Perfomed",
-  number: "22000",
+  number: 22000,
   dataKey: "users",
-  percentage: '+8',
+  percentage: 8,
   chartData: [
     { name: "Week1", users: 400 },
     { name: "Week2", users: 600 },
@@ -50,9 +50,9 @@ const[data2,setData2]=useState(
 color: "#8884d8",
 icon: "/userIcon.svg",
 title: "Target Revenue",
-number: "23000",
+number: 23000,
 dataKey: "users",
-percentage: '+8',
+percentage: 8,
 chartData: [
  { name: "Week1", users: 400 },
  { name: "Week2", users: 600 },
@@ -62,9 +62,14 @@ chartData: [
 ],
 })
 
-  const d = new Date();
-  let name = month[d.getMonth()];
-  const year=d.getFullYear()
+useEffect(()=>{
+    setData1(data1)
+    setData2(data2)
+},[])
+
+  // const d = new Date();
+  // let name = month[d.getMonth()];
+  // const year=d.getFullYear()
 
   // Define the base URL
 // const baseURL = 'http://localhost:4000'; // Update with your server's address

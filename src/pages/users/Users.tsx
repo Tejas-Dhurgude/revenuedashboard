@@ -1,5 +1,5 @@
 import './users.scss'
-import DataTable from '../../components/dataTable/DataTable'
+// import DataTable from '../../components/dataTable/DataTable'
 
 export default function Users() {
   return (
